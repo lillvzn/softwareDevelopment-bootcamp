@@ -1,0 +1,50 @@
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 30px;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 25px;
+}
+h4 {
+  font-size: 20px;
+
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+  line-height: 1;
+}
+
+#author {
+  font-style: italic;
+  font-size: 18px;
+}
+
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.related-list {
+  list-style: none;
+}
+
+li {
+  font-size: 18px;
+}
+
+#copyright {
+  font-size: 16px;
+}

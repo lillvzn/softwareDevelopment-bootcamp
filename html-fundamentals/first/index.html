@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css-fundamentals/first-style.css" />
     <title>The basic language of the web: HTML</title>
   </head>
   <body>
     <header>
-      <h1>The Code Magazine [DEMO]</h1>
+      <h1>The Code Magazine</h1>
 
       <nav>
         <a href="blog.html" target="_blank">Blog</a>
@@ -27,7 +28,9 @@
           height="90"
           width="60"
         />
-        <p>Posted by <strong>Susan Jones</strong> on Monday, June 14th 2025</p>
+        <p id="author">
+          Posted by <strong>Susan Jones</strong> on Monday, June 14th 2025
+        </p>
         <img src="images/code.png" alt="Coding Image" height="500" />
       </header>
 
@@ -43,7 +46,7 @@
       <h3>What is HTML?</h3>
       <p>
         HTML stands for
-        <strong>H</strong>yper<strong>T</strong>ext<strong>M</strong>arkup
+        <strong>H</strong>yper<strong> T</strong>ext<strong> M</strong>arkup
         <strong>L</strong>anguage. It's a markup language that web developers
         use to structure and describe the content of a webpage (and it's not a
         programming language).
@@ -88,7 +91,7 @@
 
     <aside>
       <h4>Related Posts</h4>
-      <ul>
+      <ul class="related-list">
         <li>
           <img
             src="images/related-picture.jpg"
@@ -96,7 +99,7 @@
             height="100"
           />
           <a href="#">How to learn Web Development</a>
-          <p>By Jonas Parsons</p>
+          <p class="related-author">By Jonas Parsons</p>
         </li>
         <li>
           <img
@@ -105,7 +108,7 @@
             height="100"
           />
           <a href="#">The unknown powers of CSS</a>
-          <p>By Jim Delma</p>
+          <p class="related-author">By Jim Delma</p>
         </li>
         <li>
           <img
@@ -114,10 +117,12 @@
             height="100"
           />
           <a href="#">Why JavaScript is awesome</a>
-          <p>By Charles Smith</p>
+          <p class="related-author">By Charles Smith</p>
         </li>
       </ul>
     </aside>
-    <footer>CopyRight &copy; 2025 by The Code Magazine.</footer>
+    <footer>
+      <p id="copyright">Copyright &copy; 2025 by The Code Magazine.</p>
+    </footer>
   </body>
 </html>
