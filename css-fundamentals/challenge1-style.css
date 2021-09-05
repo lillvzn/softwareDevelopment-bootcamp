@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main-page {
+  font-family: sans-serif;
+  line-height: 1.4;
+}
+
+.container {
+  width: 825px;
+  border: 5px solid black;
+  margin: 50px auto;
+}
+
+.top-bar {
+  background-color: #eee;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+.aligning {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.navbar {
+  margin: 10px 0;
+}
+
+.nav-links,
+.nav-links:visited {
+  text-decoration: none;
+  color: #f80;
+  font-weight: bold;
+}
+
+.nav-links:hover,
+.nav-links.active {
+  text-decoration: underline;
+  color: black;
+}
+
+.more-info,
+.more-info:visited {
+  text-decoration: underline;
+  color: black;
+}
+
+.more-info:hover,
+.more-info:active {
+  text-decoration: none;
+}
+
+.add-cart {
+  color: #eee;
+  background-color: black;
+  font-size: 20px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  border-top: 5px solid black;
+}
+
+.add-cart:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.details-list {
+  list-style: square;
+  margin-left: 40px;
+  margin-bottom: 10px;
+}
+
+.details-title {
+  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-left: 5px;
+}
+
+.image {
+  border: 2px solid black;
+}
+
+.upper-case {
+  text-transform: uppercase;
+}
+
+.price {
+  font-size: 25px;
+  margin-left: 5px;
+}
+
+.shipping-details {
+  font-size: 12px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+}
+
+.nav-links {
+  text-transform: uppercase;
+  text-align: center;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+p,
+a {
+  margin-left: 5px;
+}
