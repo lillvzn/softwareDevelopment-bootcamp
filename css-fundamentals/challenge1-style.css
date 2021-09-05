@@ -12,6 +12,7 @@
   width: 825px;
   border: 5px solid black;
   margin: 50px auto;
+  position: relative;
 }
 
 .top-bar {
@@ -79,7 +80,7 @@
 
 .details-title {
   margin-bottom: 20px;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-left: 5px;
 }
 
@@ -113,4 +114,64 @@
 p,
 a {
   margin-left: 5px;
+}
+
+.container::after {
+  content: "SALE";
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+
+  position: absolute;
+  top: -18px;
+  left: -36px;
+}
+
+.product-colors {
+  margin-top: 20px;
+}
+
+.color-black {
+  display: inline-block;
+  background-color: black;
+  padding: 10px;
+  margin-left: 5px;
+}
+
+.color-blue {
+  display: inline-block;
+  background-color: #002fff;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.color-red {
+  display: inline-block;
+  background-color: red;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.color-yellow {
+  display: inline-block;
+  background-color: #ffc400;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.color-green {
+  display: inline-block;
+  background-color: #6eb121;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.color-brown {
+  display: inline-block;
+  background-color: brown;
+  padding: 10px;
+  margin-left: 10px;
 }

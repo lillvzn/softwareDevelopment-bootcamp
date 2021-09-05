@@ -8,6 +8,7 @@ body {
   color: #444;
   background-color: #f8f8f8;
   border-top: 10px solid #0cf;
+  position: relative;
 }
 
 .main-header {
@@ -24,6 +25,7 @@ body {
 .article-header {
   margin-bottom: 40px;
 }
+
 h1,
 h2,
 h3 {
@@ -40,6 +42,7 @@ h1 {
 h2 {
   font-size: 40px;
   margin-bottom: 25px;
+  position: relative;
 }
 
 h3 {
@@ -57,7 +60,7 @@ h4 {
 
 p {
   font-size: 20px;
-  line-height: 1;
+  line-height: 1.5;
   margin-bottom: 15px;
 }
 
@@ -65,12 +68,13 @@ li {
   font-size: 18px;
   margin-bottom: 10px;
   margin-left: 50px;
+  /* display: inline; */
 }
 
-li:first-child {
-  /* li:nth-child(number) */
+/* li:first-child {
+  /* li:nth-child(number) 
   font-weight: bold;
-}
+} */
 
 article p:last-child {
   font-style: italic;
@@ -82,8 +86,9 @@ article p:last-child {
 }
 
 .related-author {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
+  font-style: italic;
 }
 
 .related-list {
@@ -92,6 +97,8 @@ article p:last-child {
 
 #copyright {
   font-size: 16px;
+  display: block;
+  margin-top: 5px;
 }
 
 .extras {
@@ -124,5 +131,51 @@ a:hover {
 }
 
 .author-image {
-  width: 3%;
+  width: 6%;
+}
+
+.navbar {
+  margin-left: 35px;
+  /* text-align: center; */
+}
+
+.navbar > a:link {
+  display: inline-block;
+  margin-right: 30px;
+  margin-top: 20px;
+}
+
+.navbar > a:link:last-child {
+  margin-right: 0;
+}
+
+.like-button {
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  color: #444;
+  background-color: #0cf;
+  border: 1px solid;
+  box-shadow: 5px 10px #444;
+
+  position: absolute;
+  bottom: 40px;
+  right: 60px;
+}
+
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+h2::after {
+  content: "TOP";
+  font-size: 15px;
+  background-color: #fffb00;
+  padding: 5px 10px;
+  color: #000;
+
+  position: absolute;
+  top: 0;
+  right: 0;
 }
