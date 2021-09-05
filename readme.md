@@ -4,4 +4,4 @@
 
 ## Work visualisation:
 
-![Converse shopping site](https://ibb.co/SrgLXP3)
+![Converse shopping site](https://i.ibb.co/9t0M9Nr/converse-shoe-shop.png)
