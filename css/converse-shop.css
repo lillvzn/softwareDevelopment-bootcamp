@@ -7,11 +7,11 @@
 .main-page {
   font-family: sans-serif;
   line-height: 1.4;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .container {
-  width: 1700px;
+  width: 1200px;
   border: 5px solid black;
   margin: 50px auto;
   position: relative;
@@ -26,13 +26,13 @@
 
 .aligning {
   margin: 15px 0;
-  font-size: 35px;
+  font-size: 20px;
   text-transform: uppercase;
 }
 
 .navbar {
   margin: 20px 0;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .nav-links,
@@ -63,7 +63,7 @@
 .add-cart {
   color: #eee;
   background-color: black;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
   text-transform: uppercase;
   border: none;
@@ -85,7 +85,7 @@
 }
 
 .details-title {
-  font-size: 35px;
+  font-size: 25px;
   margin-bottom: 40px;
   /* margin-top: 20px; */
   margin-left: 5px;
@@ -96,8 +96,8 @@
   border-left: 0;
   border-bottom: 0;
   border-top: 0;
-  height: 465px;
-  width: 500px;
+  height: 425px;
+  width: 425px;
 }
 
 .upper-case {
@@ -111,8 +111,9 @@
 }
 
 .shipping-details {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;
+  color: #6d6d6d;
   /* margin-bottom: 20px; */
   /* margin-left: 5px; */
 }
@@ -135,7 +136,7 @@ a {
   background-color: red;
   color: white;
   padding: 5px 10px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   letter-spacing: 2px;
 
@@ -145,53 +146,51 @@ a {
 }
 
 .product-colors {
-  margin-top: 75px;
+  display: flex;
+  gap: 12px;
+
+  margin-top: 50px;
 }
 
 .color-black {
   display: inline-block;
   background-color: black;
-  padding: 20px;
+  padding: 18px;
   /* margin-left: 15px; */
 }
 
 .color-blue {
   display: inline-block;
   background-color: #002fff;
-  padding: 20px;
-  margin-left: 10px;
+  padding: 18px;
 }
 
 .color-red {
   display: inline-block;
   background-color: red;
-  padding: 20px;
-  margin-left: 10px;
+  padding: 18px;
 }
 
 .color-yellow {
   display: inline-block;
   background-color: #ffc400;
-  padding: 20px;
-  margin-left: 10px;
+  padding: 18px;
 }
 
 .color-green {
   display: inline-block;
   background-color: #6eb121;
-  padding: 20px;
-  margin-left: 10px;
+  padding: 18px;
 }
 
 .color-brown {
   display: inline-block;
   background-color: brown;
-  padding: 20px;
-  margin-left: 10px;
+  padding: 18px;
 }
 
 /* FLOATS */
-
+/*
 .image {
   float: left;
 }
@@ -207,7 +206,7 @@ a {
   float: left;
   margin-left: 75px;
   margin-top: 20px;
-  /* margin-bottom: 25px; */
+  /* margin-bottom: 25px; 
 }
 
 .product-name {
@@ -236,4 +235,43 @@ a {
 
 .more-info {
   float: left;
+}
+*/
+
+/* ------------------------------------------------------- */
+/* FLEXBOX */
+
+.row {
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brief {
+  margin-bottom: 15px;
+}
+
+.float-price-ship {
+  display: flex;
+  align-items: center;
+  gap: 90px;
+  margin: 30px 0;
+}
+
+.image {
+  display: flex;
+}
+
+.middle-col {
+  flex: 0 0 350px;
+}
+
+.final-col {
+  margin-top: 30px;
+  margin-right: 10px;
+}
+.product-name {
+  text-align: left;
+  margin-left: 20px;
 }
