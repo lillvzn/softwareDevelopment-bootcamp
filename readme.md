@@ -6,8 +6,8 @@
 
 - **Converse Shopping site**
 
-![Converse shopping site](https://i.ibb.co/9t0M9Nr/converse-shoe-shop.png)
+![Converse shopping site](https://i.ibb.co/YkHtcw8/converse-shoe.png)
 
 - **The Code Magazine**
 
-![Code Magazine DEMO](https://i.ibb.co/CVWsRc0/The-code-magazine.png)
+![Code Magazine DEMO](https://i.ibb.co/xsPRVw0/code-magazine.png)
