@@ -147,9 +147,9 @@ a {
 
 .product-colors {
   display: flex;
-  gap: 12px;
+  gap: 15px;
 
-  margin-top: 50px;
+  margin-top: 75px;
 }
 
 .color-black {
@@ -241,37 +241,54 @@ a {
 /* ------------------------------------------------------- */
 /* FLEXBOX */
 
-.row {
+/* .row {
   display: flex;
   align-items: top;
   justify-content: space-between;
   gap: 20px;
-}
+} */
 
 .brief {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .float-price-ship {
   display: flex;
   align-items: center;
-  gap: 90px;
+  gap: 50px;
   margin: 30px 0;
 }
 
-.image {
+/* .image {
   display: flex;
-}
+} */
 
-.middle-col {
+/* .middle-col {
   flex: 0 0 350px;
 }
 
 .final-col {
   margin-top: 30px;
   margin-right: 10px;
-}
+} */
 .product-name {
   text-align: left;
   margin-left: 20px;
+}
+
+/* ------------------------------------------------------- */
+/* GRID */
+
+.page-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+}
+
+.add-cart {
+  grid-column: 1 / -1;
+}
+
+.final-col {
+  margin-top: 40px;
 }

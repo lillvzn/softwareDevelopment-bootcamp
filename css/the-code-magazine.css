@@ -15,20 +15,12 @@ body {
 .main-header {
   background-color: #e7e7e7;
   padding: 20px 40px;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 
 .container {
   width: 1600px;
   margin: 0 auto;
-}
-
-.article-header {
-  margin-bottom: 40px;
-}
-
-article {
-  margin-bottom: 30px;
 }
 
 h1,
@@ -100,13 +92,13 @@ article p:last-child {
 .related-list {
   list-style: none;
   margin-left: 0;
-  padding-right: 20px;
+  margin-right: 40px;
 }
 
 #copyright {
   font-size: 13px;
   display: block;
-  margin-top: 5px;
+  /* margin-top: 5px; */
 }
 
 .extras {
@@ -261,7 +253,7 @@ footer {
   margin-bottom: 0;
 }
 
-.row {
+/* .row {
   display: flex;
   align-items: flex-start;
   gap: 75px;
@@ -275,4 +267,23 @@ footer {
 article {
   flex: 1;
   margin-bottom: 0;
+} */
+
+/* ------------------------------------------------------- */
+/* CSS Grid */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  column-gap: 75px;
+  row-gap: 50px;
+  align-items: start;
+}
+
+.main-header {
+  grid-column: 1 / -1;
+}
+
+footer {
+  grid-column: 1 / -1;
 }
