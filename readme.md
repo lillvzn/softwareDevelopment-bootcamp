@@ -14,6 +14,7 @@
   - [Carousel](#carousel)
   - [Pagination](#pagination)
   - [Hero](#hero)
+  - [Layouts](#layouts)
 
 ---
 
