@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Urbanist:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Carousel Components - 02</title>
+    <style>
+      /*
+        SPACING SYSTEM (px)
+        2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+        FONT SIZE SYSTEM (px)
+        10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+    */
+
+      /*
+        MAIN COLOR: #895737
+        FONT COLOR: #23414D 
+        BACKGROUND: #F2FAEF
+    */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* ------------------------ */
+      /* GENERAL STYLES */
+      /* ------------------------ */
+      body {
+        font-family: "Urbanist", serif;
+        color: #895737;
+        background-color: #f2faef;
+        font-size: 18px;
+        line-height: 1;
+      }
+
+      img {
+        height: 200px;
+        border-radius: 7px;
+        transform: scale(1.5);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+      }
+
+      .carousel {
+        width: 950px;
+        margin: 100px auto;
+        background-color: #895737;
+        color: #f3eeeb;
+        border-radius: 7px;
+        padding: 32px 44px 32px 86px;
+        /* padding-left: 86px; */
+
+        display: flex;
+        align-items: center;
+        gap: 86px;
+
+        position: relative;
+      }
+
+      .testimonial-text {
+        font-size: 18px;
+        line-height: 1.4;
+        font-weight: 800;
+        margin-bottom: 10px;
+      }
+
+      .testimonial-author {
+        font-size: 16px;
+        color: #e7ddd7;
+      }
+
+      .testimonial-author--related {
+        font-size: 14px;
+        margin-top: 5px;
+        color: #e7ddd7;
+      }
+
+      .btn {
+        background-color: #f3eeeb;
+        border: none;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        border-radius: 50%;
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.25);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        cursor: pointer;
+      }
+
+      .btn--prev {
+        /* In relation to parent element */
+        top: 50%;
+        left: 0;
+        /* In relation to element itself */
+        transform: translate(-50%, -50%);
+      }
+
+      .btn--next {
+        top: 50%;
+        right: 0;
+        transform: translate(50%, -50%);
+      }
+
+      .btn-icon {
+        height: 24px;
+        width: 24px;
+        stroke: #895737;
+      }
+
+      .next-carousel {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 36px);
+
+        display: flex;
+        gap: 12px;
+      }
+
+      .btn--dot {
+        height: 12px;
+        width: 12px;
+        background-color: #f2faef;
+        border: 2px solid #895737;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .active--fill {
+        background-color: #895737;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel">
+      <img src="images/maria.jpg" alt="Maria" />
+      <blockquote class="testimonial">
+        <p class="testimonial-text">
+          "Our technology strategy fundamentally changes the way we develop
+          technology solutions, we are strengthening our internal technology
+          expertise, automating processes, reducing complexity, and modernizing
+          our IT infrastructure through long term investments and the use of
+          cloud computing."
+        </p>
+        <p class="testimonial-author">Maria de Almeida</p>
+        <p class="testimonial-author--related">
+          Chief technology, Data & Innovation Officer at Global Corp.
+        </p>
+      </blockquote>
+      <button class="btn btn--prev">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="btn-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button>
+      <button class="btn btn--next">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="btn-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </button>
+      <div class="next-carousel">
+        <button class="btn--dot">&nbsp;</button>
+        <!-- Non breaking space -->
+        <button class="btn--dot active--fill">&nbsp;</button>
+        <button class="btn--dot">&nbsp;</button>
+        <button class="btn--dot">&nbsp;</button>
+      </div>
+    </div>
+  </body>
+</html>

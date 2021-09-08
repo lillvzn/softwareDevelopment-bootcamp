@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Urbanist:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Carousel Components - 02</title>
+    <style>
+      /*
+          SPACING SYSTEM (px)
+          2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+          FONT SIZE SYSTEM (px)
+          10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+      */
+
+      /*
+          MAIN COLOR: #895737
+          FONT COLOR: #23414D
+          BACKGROUND: #F2FAEF
+      */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* ------------------------ */
+      /* GENERAL STYLES */
+      /* ------------------------ */
+      body {
+        font-family: "Urbanist", serif;
+        color: #895737;
+        background-color: #f2faef;
+        font-size: 22px;
+        line-height: 1;
+        display: flex;
+        justify-content: center;
+      }
+
+      .pagination {
+        width: 700px;
+        margin: 40% auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        position: relative;
+      }
+
+      .btn {
+        background: none;
+        border: 2px solid #895737;
+        height: 48px;
+        width: 48px;
+        position: absolute;
+        border-radius: 50%;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .btn-icon {
+        width: 24px;
+        height: 24px;
+        stroke: #895737;
+      }
+
+      .btn--prev {
+        left: 0;
+        transform: translate(50%, 0);
+      }
+
+      .btn--next {
+        right: 0;
+        transform: translate(-50%, 0);
+      }
+
+      .btn:hover {
+        background-color: #895737;
+      }
+
+      .btn:hover .btn-icon {
+        stroke: #f2faef;
+      }
+
+      a:link,
+      a:visited {
+        color: #895737;
+        text-decoration: none;
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      a:hover,
+      a:active,
+      a:link.page-link--current {
+        background-color: #895737;
+        color: #f2faef;
+      }
+
+      .page-link--current {
+        /* color: #f2faef !important; */
+        color: #f2faef;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="pagination">
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a class="page-link--current" href="#">4</a>
+      <a href="#">5</a>
+      <a href="#">6</a>
+      <a href="#">7</a>
+      <a href="#">8</a>
+      <span>...</span>
+      <a href="#">67</a>
+      <button class="btn btn--prev">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="btn-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button>
+      <button class="btn btn--next">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="btn-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </button>
+    </div>
+  </body>
+</html>

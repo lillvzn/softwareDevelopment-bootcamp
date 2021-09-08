@@ -4,15 +4,19 @@
 
 ## Work visualisation:
 
-#### Table of content
+### Table of content
 
-[Converse Shopping](#converse-shopping)
-[The Code Magazine](#the-code-magazine)
-[Design - Chairs shopping](#design-chairs)
+- [Converse Shopping](#converse-shopping)
+- [The Code Magazine](#the-code-magazine)
+- [Design - Chairs shopping](#design-chairs)
+- [Components](#components)
+  - [Accordion](#accordion)
+  - [Carousel](#carousel)
+  - [Pagination](#pagination)
 
 ---
 
-### Converse Shopping
+## Converse Shopping
 
 ```
 Aim: Re-imagine online sneaker shopping
@@ -23,9 +27,11 @@ _[REPOSITORY](https://github.com/daemonslayer/softwareDevelopment-bootcamp/tree/
 
 ![Converse shopping site](https://i.ibb.co/vmPRR24/converse.png)
 
-[Back to top](#table-of-content)
+[TOP](#table-of-content)
 
-### The Code Magazine
+---
+
+## The Code Magazine
 
 ```
 Aim: Include display properties and font size usage
@@ -36,9 +42,11 @@ _[REPOSITORY](https://github.com/daemonslayer/softwareDevelopment-bootcamp/tree/
 
 ![Code Magazine](https://i.ibb.co/dK0QB3t/code-magazine.png)
 
-[Back to top](#table-of-content)
+[TOP](#table-of-content)
 
-### Design - Chairs
+---
+
+## Design - Chairs
 
 ```
 Aim: Good UI/UX design
@@ -50,4 +58,43 @@ _[REPOSITORY](https://github.com/daemonslayer/softwareDevelopment-bootcamp/tree/
 
 ![Chairs Shop](https://i.ibb.co/G0QG1YC/chairs-design.png)
 
-[Back to top](#table-of-content)
+[TOP](#table-of-content)
+
+---
+
+## Components
+
+### Accordion
+
+```
+Aim: To build accordion and to understand components
+Learnt: Hide item when inactive, transform (rotate) and much more
+```
+
+_[REPOSITORY](https://github.com/daemonslayer/softwareDevelopment-bootcamp/tree/master/components)_
+
+![Accordion](https://i.ibb.co/R20P2m8/accordion.png)
+
+### Carousel
+
+```
+Aim: Create carousel
+Learnt: translate functions, flex alternatives, buttons and shadows
+```
+
+_[REPOSITORY](https://github.com/daemonslayer/softwareDevelopment-bootcamp/tree/master/components)_
+
+![Carousel](https://i.ibb.co/7n567QY/carousel.png)
+
+### Pagination
+
+```
+Aim: Create pagination component
+Learnt: display properties, priority recap, hover on icon + padding
+```
+
+_[REPOSITORY](https://github.com/daemonslayer/softwareDevelopment-bootcamp/tree/master/components)_
+
+![Pagination](https://i.ibb.co/NycpqBC/pagination.png)
+
+[TOP](#table-of-content)

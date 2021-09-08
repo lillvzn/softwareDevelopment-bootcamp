@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Urbanist:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Accordion Components - 01</title>
+    <style>
+      /*
+        SPACING SYSTEM (px)
+        2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+        FONT SIZE SYSTEM (px)
+        10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+    */
+
+      /*
+        MAIN COLOR: #895737
+        FONT COLOR: #23414D 
+        BACKGROUND: #F2FAEF
+    */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* ------------------------ */
+      /* GENERAL STYLES */
+      /* ------------------------ */
+      body {
+        font-family: "Urbanist", serif;
+        color: #895737;
+        background-color: #f2faef;
+        font-size: 18px;
+      }
+
+      .accordion {
+        width: 800px;
+        margin: 100px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+      }
+
+      .item {
+        padding: 30px;
+        background-color: #f5fbf2;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        /* border-top: 7px solid #895737; */
+        box-shadow: 0 10px 15px 0 #ced4da;
+
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        column-gap: 24px;
+        row-gap: 32px;
+        align-items: center;
+      }
+
+      .q-number {
+          color: #b89a87;
+      }
+
+      .question {
+          color: #495057;
+      }
+
+      .q-number,
+      .question {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .expanded-icon {
+        width: 24px;
+        height: 24px;
+        stroke: #b89a87;
+      }
+
+      .hidden-box {
+        /* padding-left: 30px; */
+        grid-column: 2;
+        display: none;
+      }
+
+      .hidden-box ul {
+        color: #657a82;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .response {
+        line-height: 1.5;
+        margin-bottom: 24px;
+        color: #23414d;
+      }
+
+      .open {
+          border-top: 5px solid #895737;
+      }
+
+      .open .hidden-box {
+          display: block;
+
+      }
+
+      .open .q-number, 
+      .open .question {
+        color: #895737;
+      }
+
+      .open .expanded-icon {
+        stroke: #895737;
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="accordion">
+      <div class="item">
+        <p class="q-number">01</p>
+        <p class="question">Is International shipping available?</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="expanded-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
+        <div class="hidden-box">
+          <p class="response">
+            Yes, shipping across the globe is available and to most countries,
+            we ship the products free of cost.
+          </p>
+          <ul>
+            <li>The customs charges must be taken by you.</li>
+            <li>
+              If in-case of return/refund, you will have to take care of
+              shipping charges and other service costs.
+            </li>
+            <li>
+              Minimum weight eligible for
+              <strong>Free international shipping</strong> is 25kg.
+            </li>
+            <li>
+              Due to overload of orders, the delivery might take more than 50
+              days.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="item open">
+        <p class="q-number">02</p>
+        <p class="question">How long do I have to return my chair?</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="expanded-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
+        <div class="hidden-box">
+          <p class="response">
+            This item is eligible for return within 10 days of delivery. You can
+            exchange this item for a different size/color or return for a full
+            refund. This item is eligible for return within 30 days of delivery.
+          </p>
+          <ul>
+            <li>
+              Your address, the item you wish to return must be eligible for
+              return.
+            </li>
+            <li>
+              If the return is not eligible for Pickup, a Self-Return option
+              will be given.
+            </li>
+            <li>
+              Once the return is received, you will, in accordance with our
+              Refund Policy, be issued a refund to your original payment method.
+            </li>
+            <li>
+              Refund will be added to your account within 2-4 business days.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="item">
+        <p class="q-number">03</p>
+        <p class="question">
+          Lost my warranty, am I still eligible to claim?
+        </p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="expanded-icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
+        <div class="hidden-box">
+          <p class="response">
+            If you have the purchase details along with date of purchase, and if
+            the current date is inside the warranty time, then you are eligible
+            to claim your warranty.
+          </p>
+        </div>
+    </div>
+  </body>
+</html>
