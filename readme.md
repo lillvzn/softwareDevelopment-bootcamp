@@ -109,4 +109,15 @@ _[REPOSITORY](https://github.com/daemonslayer/softwareDevelopment-bootcamp/tree/
 
 ![Hero](https://i.ibb.co/PMKQgbJ/hero.png)
 
+### Layouts
+
+```
+Aim: To build layouts and childern layouts
+Learnt: Using flex to seperate content, grid-columns, tenplates and scroll (overflow)
+```
+
+_[REPOSITORY](https://github.com/daemonslayer/softwareDevelopment-bootcamp/tree/master/components)_
+
+![Layouts](https://i.ibb.co/4m75943/layouts.png)
+
 [TOP](#table-of-content)
