@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Hero Section</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-family: "Rubik", sans-serif;
+        color: #f2faef;
+      }
+
+      .container {
+        width: 1200px;
+        margin: 0 auto;
+      }
+
+      header {
+        height: 100vh;
+        position: relative;
+
+        background-image: linear-gradient(
+            to right,
+            rgba(35, 35, 35, 0.8),
+            rgba(35, 35, 35, 0.2)
+          ),
+          url("images/hero.jpg");
+        background-size: cover;
+      }
+
+      nav {
+        font-size: 20px;
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 32px;
+      }
+
+      .header-container {
+        width: 1200px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+
+        transform: translate(-50%, -50%);
+
+        /* text-align: center; */
+      }
+
+      .header-container--inner {
+        width: 50%;
+      }
+
+      h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 52px;
+        margin-bottom: 32px;
+        line-height: 1.08;
+      }
+
+      p {
+        font-size: 20px;
+        line-height: 1.5;
+        margin-bottom: 48px;
+      }
+
+      .btn:link,
+      .btn:visited {
+        font-size: 20px;
+        font-weight: 600;
+        /* text-transform: capitalize; */
+        background-color: #e67e33;
+        color: #fff;
+        text-decoration: none;
+
+        display: inline-block;
+        padding: 16px 32px;
+        border-radius: 10px;
+      }
+
+      h2 {
+        font-size: 44px;
+        margin-bottom: 48px;
+      }
+
+      section {
+        padding: 96px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <div>LOGO</div>
+        <div>NAVIGATION</div>
+      </nav>
+      <div class="header-container">
+        <div class="header-container--inner">
+          <h1>Healthy meal <em>delivered</em> to your day, all year long.</h1>
+          <p>
+            The smart all-year-long subscription will make you eat healthy
+            again. Get tailored tastes and nutritional needs.
+          </p>
+
+          <a href="#" class="btn">Start eating well</a>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="container">
+        <blockquote>
+          “Owners of dogs will have noticed that, if you provide them with food
+          and water and shelter and affection, they will think you are god.
+          Whereas owners of cats are compelled to realize that, if you provide
+          them with food and water and shelter and affection, they draw the
+          conclusion that they are gods.”
+        </blockquote>
+        <p>&dash; <em>Christopher Hitchens</em></p>
+      </div>
+    </section>
+  </body>
+</html>

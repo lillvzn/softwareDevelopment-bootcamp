@@ -13,6 +13,7 @@
   - [Accordion](#accordion)
   - [Carousel](#carousel)
   - [Pagination](#pagination)
+  - [Hero](#hero)
 
 ---
 
@@ -96,5 +97,16 @@ Learnt: display properties, priority recap, hover on icon + padding
 _[REPOSITORY](https://github.com/daemonslayer/softwareDevelopment-bootcamp/tree/master/components)_
 
 ![Pagination](https://i.ibb.co/NycpqBC/pagination.png)
+
+### Hero
+
+```
+Air: To create hero section and learn about background-images
+Learnt: blurring background images, shade overlays, linear-gradient and vh (viewport height)
+```
+
+_[REPOSITORY](https://github.com/daemonslayer/softwareDevelopment-bootcamp/tree/master/components)_
+
+![Hero](https://i.ibb.co/PMKQgbJ/hero.png)
 
 [TOP](#table-of-content)
