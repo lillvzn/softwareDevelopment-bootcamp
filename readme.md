@@ -101,7 +101,7 @@ _[REPOSITORY](https://github.com/daemonslayer/softwareDevelopment-bootcamp/tree/
 ### Hero
 
 ```
-Air: To create hero section and learn about background-images
+Aim: To create hero section and learn about background-images
 Learnt: blurring background images, shade overlays, linear-gradient and vh (viewport height)
 ```
 
