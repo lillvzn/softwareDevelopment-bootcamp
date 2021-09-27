@@ -216,3 +216,27 @@ console.log("26" * "4");
 console.log("23" < "80"); 
 
 */
+
+// ------------- Truthy and falsy -------------
+
+console.log("----- Truthy and falsy -----");
+
+// falsy: 0, '', undefined, null, NaN
+// all others are truthy
+
+const money = 0;
+
+if (money) {
+  // 0 -> falsy value
+  console.log(`Don't spend it all!`);
+} else {
+  console.log(`Get a job!`);
+}
+
+let height;
+
+if (height) {
+  console.log(`Yay! I'm crazy...`);
+} else {
+  console.log(`This is fun!`);
+}
