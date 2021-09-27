@@ -1,3 +1,5 @@
+/* 
+
 // ------------- Values and variables -------------
 
 console.log("----- Values and Variables -----");
@@ -134,3 +136,83 @@ console.log(`String
 with
 multiple lines
 using backticks!`);
+
+// ------------- conditional statements -------------
+
+console.log("----- if / else statements -----");
+
+const amount = 196;
+
+if (amount >= 199) {
+  console.log("The price is high");
+} else {
+  console.log("The price is good");
+}
+
+const shopNum = 36;
+let price;
+
+if (shopNum <= 35) {
+  price = 1.99;
+} else {
+  price = 1.89;
+}
+
+console.log(price);
+
+// CHALLENGE
+
+// test data 1
+// const playerOneMass = 78;
+// const playerOneHeight = 1.69;
+
+// const playerTwoMass = 92;
+// const playerTwoHeight = 1.95;
+
+// test data 2
+const playerOneMass = 95;
+const playerOneHeight = 1.88;
+
+const playerTwoMass = 85;
+const playerTwoHeight = 1.76;
+
+const playerOneBMI = playerOneMass / playerOneHeight ** 2;
+const playerTwoBMI = playerTwoMass / playerTwoHeight ** 2;
+
+console.log(playerOneBMI, playerTwoBMI);
+
+if (playerOneBMI > playerTwoBMI) {
+  console.log(
+    `Player One has a higher BMI of ${
+      Math.round((playerOneBMI + Number.EPSILON) * 100) / 100
+    }`
+  );
+} else {
+  console.log(
+    `Player Two has a higher BMI of ${
+      Math.round((playerTwoBMI + Number.EPSILON) * 100) / 100
+    }`
+  );
+}
+
+// ------------- Type conversion and coercion -------------
+
+console.log("----- Type conversion and coercion -----");
+
+//type conversion (manual)
+const inputYear = "1999";
+console.log(Number(inputYear) + 18); // convert string to number (int)
+// NaN: Invalid number
+const stringVal = 1466;
+const stringToNum = String(stringVal);
+console.log(typeof stringToNum);
+
+// type coercion
+// js figures the data-type
+
+console.log("This is " + 76 + " kilograms");
+console.log("55" - "80" - 56);
+console.log("26" * "4");
+console.log("23" < "80"); 
+
+*/
