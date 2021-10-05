@@ -195,6 +195,7 @@ if (playerOneBMI > playerTwoBMI) {
   );
 }
 
+
 // ------------- Type conversion and coercion -------------
 
 console.log("----- Type conversion and coercion -----");
@@ -213,9 +214,7 @@ console.log(typeof stringToNum);
 console.log("This is " + 76 + " kilograms");
 console.log("55" - "80" - 56);
 console.log("26" * "4");
-console.log("23" < "80"); 
-
-*/
+console.log("23" < "80");
 
 // ------------- Truthy and falsy -------------
 
@@ -240,3 +239,32 @@ if (height) {
 } else {
   console.log(`This is fun!`);
 }
+
+// ------------- Equality operators -------------
+
+console.log("----- === vs == -----");
+
+const age = 21;
+
+// === or !== absolutely equal to (strict equality operator) - No type coercion
+// == or != loose equality operator (type coercion) (MOSTLY AVOID)
+
+if (age === 21) console.log("Adult (strict)");
+if (age == "21") console.log("Adult (loose)");
+
+const favNum = Number(prompt("Your favourite number?"));
+console.log(favNum);
+
+if (favNum === 21) {
+  console.log("Mine too!");
+} else if (favNum === 35) {
+  console.log("Oh okay!");
+} else console.log("We don't match");
+
+ */
+
+// ------------- Logical operators -------------
+
+console.log("----- Logical operators -----");
+
+// basic operators: and, or, not
