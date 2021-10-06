@@ -261,10 +261,119 @@ if (favNum === 21) {
   console.log("Oh okay!");
 } else console.log("We don't match");
 
- */
+
 
 // ------------- Logical operators -------------
 
 console.log("----- Logical operators -----");
 
 // basic operators: and, or, not
+
+const hasDriverLicense = false;
+const hasGoodVision = true;
+
+if (hasDriverLicense && hasGoodVision)
+  console.log("You are safe to drive with!");
+else if (hasDriverLicense && !hasGoodVision)
+  console.log("Get your eyes checked!");
+else if (!hasDriverLicense && hasGoodVision) console.log("Get the license");
+else console.log("You are invalid");
+
+const num = 21;
+
+if (num < 10 || num > 20) console.log("Incorrect");
+else console.log("Correct");
+
+// CHALLENGE
+
+const maxScore = 100;
+// // testdata 1
+const dolphinsScore = [96, 108, 89];
+const koalasScore = [88, 91, 110];
+
+// // testdata 2
+// const dolphinsScore = [97, 112, 101];
+// const koalasScore = [109, 95, 123];
+
+// // testdata 3
+// const dolphinsScore = [97, 112, 101];
+// const koalasScore = [109, 95, 106];
+
+const dolphinsScoreAvg =
+  dolphinsScore.reduce((a, b) => a + b, 0) / dolphinsScore.length;
+const koalasScoreAvg =
+  koalasScore.reduce((a, b) => a + b, 0) / koalasScore.length;
+
+if (dolphinsScoreAvg >= maxScore || koalasScoreAvg >= maxScore) {
+  if (dolphinsScoreAvg > koalasScoreAvg) {
+    console.log(
+      `Dolphins win with a score difference of ${
+        dolphinsScoreAvg - koalasScoreAvg
+      }`
+    );
+  } else if (dolphinsScoreAvg === koalasScoreAvg) {
+    console.log(`The game is a tie with a score ${dolphinsScoreAvg}, both win`);
+  } else {
+    console.log(
+      `Koalas win with a score difference of ${
+        koalasScoreAvg - dolphinsScoreAvg
+      }`
+    );
+  }
+} else
+  console.log(`No team wins the trophy as no team has score > ${maxScore}`);
+
+
+// ------------- Switch statements -------------
+
+console.log("----- Switch statement -----");
+
+const day = "wednesday";
+
+switch (day) {
+  case "monday":
+    console.log("Plan architecture");
+    console.log("Initialise movie marathon");
+    break;
+  case "tuesday":
+    console.log("Study for exams");
+    console.log("Go for a run");
+    break;
+  case "wednesday":
+  case "thursday":
+    console.log("Upper body workout preparations");
+    console.log("Complete the exams");
+    break;
+  case "friday":
+    console.log("Play video games all day");
+    break;
+  case "saturday":
+    console.log("Rest day");
+    break;
+  case "sunday":
+    console.log("Buy a new phone");
+    break;
+  default:
+    console.log("Invalid day");
+}
+
+// ---------- using if else statements -------------
+
+// if (day === "monday") {
+//   console.log("Plan architecture");
+//   console.log("Initialise movie marathon");
+// } else if (day === "tuesday") {
+//   console.log("Study for exams");
+//   console.log("Go for a run");
+// } else if (day === "wednesday" || day === "thursday") {
+//   console.log("Upper body workout preparations");
+//   console.log("Complete the exams");
+// } else if (day === "friday") {
+//   console.log("Play video games all day");
+// } else if (day === "saturday") {
+//   console.log("Rest day");
+// } else if (day === "sunday") {
+//   console.log("Buy a new phone");
+// } else console.log("Invalid day");
+
+*/
