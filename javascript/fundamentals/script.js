@@ -377,3 +377,32 @@ switch (day) {
 // } else console.log("Invalid day");
 
 */
+
+// ------------- Conditional operators -------------
+
+console.log("----- Conditional operators (ternary) -----");
+
+// const age = 33;
+
+// age >= 18
+//   ? console.log("You can enter the bar!")
+//   : console.log("Better luck next time");
+
+// const drink = age >= 18 ? "wine" : "water";
+// console.log(drink);
+
+// console.log(
+//   `Hey mate!, how are you, this is to test ${age >= 18 ? "wine" : "water"}`
+// );
+
+// CHALLENGE
+
+const billAmount = 430;
+
+const tipAmount =
+  billAmount >= 50 && billAmount <= 300 ? billAmount * 0.15 : billAmount * 0.2;
+console.log(
+  `The bill was ${billAmount}, the tip was ${tipAmount}, and the total value was ${
+    billAmount + tipAmount
+  }`
+);
