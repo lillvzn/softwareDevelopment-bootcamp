@@ -376,7 +376,7 @@ switch (day) {
 //   console.log("Buy a new phone");
 // } else console.log("Invalid day");
 
-*/
+
 
 // ------------- Conditional operators -------------
 
@@ -406,3 +406,5 @@ console.log(
     billAmount + tipAmount
   }`
 );
+
+*/
