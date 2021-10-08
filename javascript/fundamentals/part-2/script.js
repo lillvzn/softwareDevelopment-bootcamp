@@ -150,8 +150,6 @@ console.log(friends);
 console.log(friends.indexOf("Ana")); // index
 console.log(friends.includes("Jacob")); // if present, returns true (ES6) - no coersion
 
-*/
-
 // CHALLENGE
 
 const calcTip = (bill) => {
@@ -166,3 +164,25 @@ const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(`Bills: ${bills}`);
 console.log(`Tips: ${tips}`);
 console.log(`Total: ${total}`);
+
+*/
+
+// <----------- Introduction to objects ----------->
+
+console.log("<---- Objects ---->");
+
+const details = {
+  firstName: "Michael",
+  lastName: "Jackson",
+  age: 78,
+  job: "Artist",
+  friends: ["Galope", "Stern", "Dale"],
+};
+
+console.log(details);
+
+// CHALLENGE
+
+console.log(
+  `I have ${details.friends.length} friends, and my best friend is ${details.friends[0]}`
+);
