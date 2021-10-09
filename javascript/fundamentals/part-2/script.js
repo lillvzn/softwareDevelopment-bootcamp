@@ -281,8 +281,97 @@ for (let i = 0; i < 11; i++) {
   console.log(`Repition ${i} complete!`);
 }
 
-*/
-
 // <----------- looping arrays, breaking and continue ----------->
 
 console.log("<---- Looping arrays, breaking and continue ---->");
+
+const arr = [
+  "Jack",
+  "Reacher",
+  1998,
+  "Actor",
+  ["Mason", "Julia", "George"],
+  true,
+];
+const newArr = [];
+
+for (let i = 0; i < arr.length; i++) {
+  console.log(arr[i]);
+  newArr.push(typeof arr[i]);
+}
+console.log(newArr);
+
+// continue and break
+
+for (let i = 0; i < arr.length; i++) {
+  if (typeof arr[i] !== "string") continue; // exits current iteration
+  console.log(arr[i], typeof arr[i]);
+}
+// console.log(newArr);
+
+for (let i = 0; i < arr.length; i++) {
+  if (typeof arr[i] === "number") break; // exits loop
+  console.log(arr[i], typeof arr[i]);
+}
+
+const arr = ["Jack", "Reacher", 1998, "Actor", ["Mason", "Julia", "George"]];
+
+// backwards loop
+for (let i = arr.length - 1; i >= 0; i--) {
+  console.log(arr[i]);
+}
+
+for (let i = 1; i < 6; i++) {
+  console.log(`----------------->> count: ${i}`);
+  for (let j = 1; j < 6; j++) {
+    console.log(`Repition ${j}`);
+  }
+}
+
+// <----------- While loop ----------->
+
+console.log("<---- While loop ---->");
+
+for (let i = 0; i <= 10; i++) {
+  console.log(`Repition: ${i}`);
+}
+
+let j = 0;
+while (j <= 10) {
+  console.log(`Repition (while): ${j}`);
+  j++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+  console.log(`Roll: ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) console.log(`Loop ends`);
+}
+
+*/
+
+// CHALLENGE
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const total = [];
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+
+for (let i = 0; i < bills.length; i++) {
+  tips.push(calcTip(bills[i]));
+  total.push(bills[i] + tips[i]);
+}
+console.log(bills, tips, total);
+
+function calcAvg(arr) {
+  let totalSum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    totalSum += arr[i];
+  }
+  return totalSum / arr.length;
+}
+console.log(calcAvg(total));
