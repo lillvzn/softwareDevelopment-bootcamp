@@ -165,7 +165,6 @@ console.log(`Bills: ${bills}`);
 console.log(`Tips: ${tips}`);
 console.log(`Total: ${total}`);
 
-*/
 
 // <----------- Introduction to objects ----------->
 
@@ -186,3 +185,104 @@ console.log(details);
 console.log(
   `I have ${details.friends.length} friends, and my best friend is ${details.friends[0]}`
 );
+
+
+
+// <----------- Object methods ----------->
+
+console.log("<---- Object Methods ---->");
+
+const details = {
+  firstName: "Michael",
+  lastName: "Jackson",
+  birthYear: 1978,
+  job: "Artist",
+  friends: ["Galope", "Stern", "Dale"],
+  driverLicense: true,
+
+  //object method
+  // calcAge: function (birthYear) {
+  //   return 2021 - birthYear;
+  // },
+
+  // calcAge: function () {
+  //   return 2021 - this.birthYear;
+  // },
+
+  calcAge: function () {
+    this.age = 2021 - this.birthYear;
+    return this.age;
+  },
+
+  // CHALLENGE
+
+  detailsSummary: function () {
+    this.summary = `${this.firstName} is a ${this.calcAge()} year old ${
+      this.job
+    }, and he has ${this.driverLicense ? "a" : "no"} driver's license`;
+    return this.summary;
+  },
+};
+
+// console.log(details.calcAge());
+// console.log(details.age);
+console.log(details.detailsSummary());
+
+
+// CHALLENGE
+
+const mark = {
+  firstName: "Mark",
+  lastName: "Miller",
+  fullName: function () {
+    return `${this.firstName} ${this.lastName}`;
+  },
+  mass: 78,
+  height: 1.69,
+  calcBMI: function () {
+    this.BMI = this.mass / this.height ** 2;
+    return this.BMI;
+  },
+};
+
+const john = {
+  firstName: "John",
+  lastName: "Smith",
+  fullName: function () {
+    return `${this.firstName} ${this.lastName}`;
+  },
+  mass: 92,
+  height: 1.95,
+  calcBMI: function () {
+    this.BMI = this.mass / this.height ** 2;
+    return this.BMI;
+  },
+};
+
+const BMISummary = function (mark, john) {
+  const higherBMI =
+    mark.calcBMI() >= john.calcBMI()
+      ? `${mark.fullName()}'s BMI (${
+          mark.BMI
+        }) is higher than ${john.fullName()}'s BMI (${john.BMI})!`
+      : `${john.fullName()}'s BMI (${
+          john.BMI
+        }) is higher than ${mark.fullName()}'s BMI (${mark.BMI})!`;
+  return higherBMI;
+};
+
+console.log(BMISummary(mark, john));
+
+// <----------- For loop ----------->
+
+console.log("<---- For loop ---->");
+
+for (let i = 0; i < 11; i++) {
+  console.log(`Repition ${i} complete!`);
+}
+
+*/
+
+// <----------- looping arrays, breaking and continue ----------->
+
+console.log("<---- Looping arrays, breaking and continue ---->");
