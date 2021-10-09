@@ -350,8 +350,6 @@ while (dice !== 6) {
   if (dice === 6) console.log(`Loop ends`);
 }
 
-*/
-
 // CHALLENGE
 
 const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
@@ -375,3 +373,5 @@ function calcAvg(arr) {
   return totalSum / arr.length;
 }
 console.log(calcAvg(total));
+
+*/
