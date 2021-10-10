@@ -369,6 +369,7 @@ function calcAvg(arr) {
   let totalSum = 0;
   for (let i = 0; i < arr.length; i++) {
     totalSum += arr[i];
+    console.log(totatSum);
   }
   return totalSum / arr.length;
 }
