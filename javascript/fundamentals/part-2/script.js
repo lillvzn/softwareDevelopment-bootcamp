@@ -413,6 +413,8 @@ console.log(reverseWhatever(1213));
 // }, 0);
 // console.log(maxInArray);
 
+// for 1 array
+
 function tempAmplitude(tempValues) {
   for (let i = 0; i <= tempValues.length - 1; i++) {
     if (typeof tempValues[i] !== "number") {
@@ -425,3 +427,25 @@ function tempAmplitude(tempValues) {
 }
 
 console.log(tempAmplitude([13, 10, 15, "error", 22, 16]));
+
+// SUBCHALLENGE -  for 2 arrays
+
+function tempAmplitudeArrays(tempValues1, tempValues2) {
+  const tempValues = tempValues1.concat(tempValues2);
+  // console.log(tempValues);
+  for (let i = 0; i <= tempValues.length - 1; i++) {
+    if (typeof tempValues[i] !== "number") {
+      tempValues.splice(i, 1);
+    }
+  }
+  const maxValue = tempValues.reduce((prev, next) => Math.max(prev, next));
+  const minValue = tempValues.reduce((prev, next) => Math.min(prev, next));
+  return maxValue - minValue;
+}
+
+console.log(
+  tempAmplitudeArrays(
+    [13, 10, 15, "error", 22, 16],
+    [143, 9, "error", 34, 121, 227, "error", 66]
+  )
+);
