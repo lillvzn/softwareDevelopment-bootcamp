@@ -376,3 +376,52 @@ function calcAvg(arr) {
 console.log(calcAvg(total));
 
 */
+
+// CHALLENGE
+
+function reverseWhatever(value) {
+  let reversedArray = [];
+  if (
+    typeof value !== "string" &&
+    typeof value !== "number" &&
+    !Array.isArray(value)
+  ) {
+    return value;
+  } else if (typeof value === "string") {
+    const convertValue = String(value);
+    const reversedValue = convertValue.split("").reverse().join("");
+    return reversedValue;
+  } else if (typeof value === "number") {
+    const convertValue = String(value);
+    const reversedValue = convertValue.split("").reverse().join("");
+    return Number(reversedValue);
+  } else if (Array.isArray(value)) {
+    for (let i = value.length - 1; i >= 0; i--) {
+      reversedArray.push(value[i]);
+    }
+    return reversedArray;
+  }
+}
+
+console.log(reverseWhatever(1213));
+
+// CHALLENGE
+
+// const arr = [1, 2, 65, 12];
+// const maxInArray = arr.reduce(function (prev, next) {
+//   return Math.max(prev, next);
+// }, 0);
+// console.log(maxInArray);
+
+function tempAmplitude(tempValues) {
+  for (let i = 0; i <= tempValues.length - 1; i++) {
+    if (typeof tempValues[i] !== "number") {
+      tempValues.splice(i, 1);
+    }
+  }
+  const maxValue = tempValues.reduce((prev, next) => Math.max(prev, next));
+  const minValue = tempValues.reduce((prev, next) => Math.min(prev, next));
+  return maxValue - minValue;
+}
+
+console.log(tempAmplitude([13, 10, 15, "error", 22, 16]));
