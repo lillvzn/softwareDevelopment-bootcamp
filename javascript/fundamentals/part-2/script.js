@@ -375,7 +375,11 @@ function calcAvg(arr) {
 }
 console.log(calcAvg(total));
 
-*/
+
+
+// <----------- Debugging ----------->
+
+console.log("<---- Debugging ---->");
 
 // CHALLENGE
 
@@ -449,3 +453,21 @@ console.log(
     [143, 9, "error", 34, 121, 227, "error", 66]
   )
 );
+
+
+// CHALLENGE
+const data1 = [17, 21, 23];
+const data2 = [12, 5, -5, 0, 4];
+
+function printForecast(arr) {
+  let forcastArr = [];
+  for (let i = 0; i <= arr.length - 1; i++)
+    forcastArr.push(String(`... ${arr[i]}°C in ${i + 1} days `));
+  forcastArr.push(`...`);
+  return forcastArr.join("");
+}
+
+console.log(printForecast(data1));
+console.log(printForecast(data2));
+
+*/
