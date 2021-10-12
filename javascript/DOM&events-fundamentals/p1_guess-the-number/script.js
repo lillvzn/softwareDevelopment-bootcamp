@@ -8,6 +8,7 @@
 
 let numberToGuess = Math.trunc(Math.random() * 51);
 let score = 25;
+let highScore = 0;
 
 document.querySelector(".check").addEventListener("click", function () {
   const guessedNumber = Number(document.querySelector(".guess").value);
@@ -19,6 +20,10 @@ document.querySelector(".check").addEventListener("click", function () {
     document.querySelector(".number").textContent = numberToGuess;
     document.querySelector("body").style.backgroundColor = "#60b347";
     document.querySelector(".number").style.width = "30rem";
+    if (score > highScore) {
+      highScore = score;
+      document.querySelector(".highscore").textContent = highScore;
+    }
   } else if (guessedNumber > numberToGuess) {
     if (score > 1) {
       document.querySelector(".message").textContent = "Too high!";
