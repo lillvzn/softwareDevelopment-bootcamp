@@ -1,6 +1,5 @@
 "use strict";
 
-/* 
 // <---------- Premitives v Objects ----------->
 
 const me = { name: "self", age: 23 };
@@ -8,8 +7,6 @@ const friend = me;
 friend.age = 37;
 console.log(friend);
 console.log(me);
-
-
 
 // Primitive type (value stored in own memory in call stack)
 
@@ -66,5 +63,3 @@ marriedSimonInner.family.push("Josh");
 
 console.log("Before marriage (copied object - deep):", simonInner);
 console.log("After marriage (copied object - deep):", marriedSimonInner);
-
-*/
