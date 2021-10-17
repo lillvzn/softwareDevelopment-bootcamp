@@ -1,6 +1,5 @@
 "use strict";
 
-/*
 // <----------- Regular v Arrow function ------------->
 
 const myName = {
@@ -29,8 +28,6 @@ const myName = {
 myName.greet(); // undefined
 myName.calcAge();
 
-
-
 const addExpression = function (a, b) {
   console.log(arguments);
   return a + b;
@@ -43,5 +40,3 @@ const addExpr = (a, b) => {
   return a + b;
 };
 addExpr(5, 8); // arguments keyword won't work in arrow function (not important in modern days)
-
-*/
