@@ -1,7 +1,7 @@
 // TDZ - temporal dead zone
 
 "use strict";
-/*
+
 console.log(hello);
 // returns undefined
 console.log(world);
@@ -11,7 +11,6 @@ console.log(ha);
 var hello = "It's me!!!";
 let world = "Nah fam";
 const ha = "Ayo!";
-
 
 console.log(add);
 // Cannot access 'add' before initialization
@@ -29,4 +28,3 @@ function subtract(a, b) {
 }
 
 const multiply = (a, b) => a * b;
-*/
