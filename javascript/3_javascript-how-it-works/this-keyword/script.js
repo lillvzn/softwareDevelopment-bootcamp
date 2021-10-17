@@ -1,6 +1,5 @@
 "use strict";
 
-/*
 // <--------- this keyword ----------->
 
 console.log(this); // window
@@ -38,5 +37,3 @@ myNameTwo.calcAge(); // points this.year in object myNameTwo
 const copyCalcAge = myName.calcAge;
 console.log(copyCalcAge);
 copyCalcAge(); // throws undefined as this doesn't point to year as year is not present
-
-*/
