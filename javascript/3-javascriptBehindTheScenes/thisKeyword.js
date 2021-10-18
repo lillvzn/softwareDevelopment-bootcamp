@@ -4,12 +4,12 @@
 
 console.log(this); // window
 
-const calcAge = function (year) {
+const calAge = function (year) {
   console.log(2054 - year);
   console.log(this); // undefined
 };
 
-calcAge(2022);
+calAge(2022);
 
 const calcAgeArrow = (year) => {
   console.log(2054 - year);
@@ -18,22 +18,22 @@ const calcAgeArrow = (year) => {
 
 calcAgeArrow(2023);
 
-const myName = {
+const someName = {
   year: 1999,
   calcAge: function () {
     console.log(this);
     console.log(2054 - this.year); // points to object calling the method
   },
 };
-myName.calcAge();
+someName.calcAge();
 
-const myNameTwo = {
+const someNameTwo = {
   year: 2021,
 };
 
-myNameTwo.calcAge = myName.calcAge; // borrowing method
-myNameTwo.calcAge(); // points this.year in object myNameTwo
+someNameTwo.calcAge = someName.calcAge; // borrowing method
+someNameTwo.calcAge(); // points this.year in object someNameTwo
 
-const copyCalcAge = myName.calcAge;
+const copyCalcAge = someName.calcAge;
 console.log(copyCalcAge);
 copyCalcAge(); // throws undefined as this doesn't point to year as year is not present

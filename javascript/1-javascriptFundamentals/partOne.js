@@ -395,6 +395,7 @@ console.log("----- Conditional operators (ternary) -----");
 //   `Hey mate!, how are you, this is to test ${age >= 18 ? "wine" : "water"}`
 // );
 
+
 // CHALLENGE
 
 const billAmount = 430;
@@ -406,5 +407,4 @@ console.log(
     billAmount + tipAmount
   }`
 );
-
 */
