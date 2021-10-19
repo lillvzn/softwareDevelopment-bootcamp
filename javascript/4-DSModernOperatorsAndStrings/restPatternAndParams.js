@@ -4,7 +4,7 @@
 const arr = [1, 2, 3, ...[4, 5]];
 
 // <--------- Destructuring ----------->
-// pattern (left side of =)
+// rest (left side of =)
 const [a, b, ...others] = [1, 2, 3, 4, 5, 6, 7];
 console.log(a, b, others);
 
