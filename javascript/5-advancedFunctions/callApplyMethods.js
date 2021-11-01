@@ -33,7 +33,7 @@ console.log(lufthansa);
 
 const swiss = {
   airline: "Swiss Airlines",
-  iataCode: "EW",
+  iataCode: "SA",
   bookings: [],
 };
 book.call(swiss, 67, "Jonas Cooper");
