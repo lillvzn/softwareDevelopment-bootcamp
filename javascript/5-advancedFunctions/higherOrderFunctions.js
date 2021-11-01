@@ -26,3 +26,21 @@ transformer(sentence, upperFirstWord);
 transformer(sentence, oneWord);
 
 // 2 - functions returning function
+
+const greet = function (greeting) {
+  return function (name) {
+    console.log(`${greeting} ${name}`);
+  };
+};
+
+const greetHey = greet("Hey");
+greetHey("Susan");
+greetHey("Smith");
+
+greet("Hello")("Paul");
+
+// CHALLENGE (Same as above - use arrow funct)
+const greetArrow = (greeting) => (name) =>
+  console.log(`Using Arrow function: ${greeting} ${name}`);
+
+greetArrow("Hola")("Amigo");
