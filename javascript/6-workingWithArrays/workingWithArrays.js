@@ -75,3 +75,7 @@ currenciesUnique.forEach(function (val, _, map) {
 // Map -> another method to loop over array (similar to forEach but creates a new array after applying operations to original arr)
 // Filter -> to filter elements in original arr that satisfy conditions (creates new arr as well)
 // Reduce -> reduces all arr elements to one single value (ex: adding of array numbers)
+
+// MAP
+const euroToUsd = 1.2;
+const movementsInUSD = movements.map((el) => el * euroToUsd);
