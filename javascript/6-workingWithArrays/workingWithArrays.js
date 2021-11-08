@@ -103,3 +103,8 @@ const max = movements.reduce((acc, mov) => {
   if (acc > mov) return acc;
   else return mov;
 }, movements[0]);
+
+// Find method
+movements.find((mov) => mov < 0); // returns first el in array that satisfies the condition
+const account = accounts.find((acc) => acc.owner === "Jassica Davis");
+console.log(account);
