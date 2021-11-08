@@ -95,7 +95,11 @@ const deposits = movements.filter((el) => el > 0);
 const withdrawals = movements.filter((el) => el < 0);
 
 // REDUCE
-const balance = movements.reduce((acc, cur, idx, arr) => {
-  return acc + cur;
-}, 0);
+const balance = movements.reduce((acc, cur) => acc + cur, 0);
 console.log(balance);
+
+// MAX VALUE
+const max = movements.reduce((acc, mov) => {
+  if (acc > mov) return acc;
+  else return mov;
+}, movements[0]);

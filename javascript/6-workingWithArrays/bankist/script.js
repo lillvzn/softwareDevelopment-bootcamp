@@ -86,4 +86,28 @@ const computeUserNames = function (accounts) {
 computeUserNames(accounts);
 // console.log(accounts);
 
-// filter
+const displayBalance = (movements) => {
+  const balance = movements.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${balance}€`;
+};
+displayBalance(account1.movements);
+
+const displaySummary = (movements) => {
+  const incomes = movements
+    .filter((mov) => mov > 0)
+    .reduce((acc, mov) => acc + mov, 0);
+  labelSumIn.textContent = `${incomes}€`;
+
+  const out = movements
+    .filter((mov) => mov < 0)
+    .reduce((acc, mov) => acc + mov);
+  labelSumOut.textContent = `${Math.abs(out)}€`;
+
+  const interest = movements
+    .filter((mov) => mov > 0)
+    .map((deposit) => deposit * 0.012)
+    .filter((intr) => intr >= 1)
+    .reduce((acc, intr) => acc + intr, 0);
+  labelSumInterest.textContent = `${interest}`;
+};
+displaySummary(account1.movements);
