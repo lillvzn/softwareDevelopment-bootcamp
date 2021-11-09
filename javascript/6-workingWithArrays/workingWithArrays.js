@@ -108,3 +108,15 @@ const max = movements.reduce((acc, mov) => {
 movements.find((mov) => mov < 0); // returns first el in array that satisfies the condition
 const account = accounts.find((acc) => acc.owner === "Jassica Davis");
 console.log(account);
+
+// some method
+const anyDeposits = movements.some((mov) => mov > 0); // some value satisfying given condition (similar to includes (where no condition is needed))
+
+// every method
+const allDeposits = movements.every((mov) => mov > 0); // all values satisfying given condition
+
+// separate callbacks
+const deposit = (mov) => mov > 0;
+console.log(movements.some(deposit));
+console.log(movements.every(deposit));
+console.log(movements.filter(deposit));
