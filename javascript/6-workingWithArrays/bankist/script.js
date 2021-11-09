@@ -135,6 +135,17 @@ btnLogin.addEventListener("click", function (e) {
   }
 });
 
+// request loan
+btnLoan.addEventListener("click", function (e) {
+  e.preventDefault();
+  const amount = Number(inputLoanAmount.value);
+  if (amount > 0 && currAccount.movements.some((mov) => mov >= amount * 0.1)) {
+    currAccount.movements.push(amount);
+    updateUI(currAccount);
+  }
+  inputLoanAmount.value = "";
+});
+
 // transfer
 btnTransfer.addEventListener("click", function (e) {
   e.preventDefault();
@@ -153,4 +164,19 @@ btnTransfer.addEventListener("click", function (e) {
     receiverAccount.movements.push(amount);
     updateUI(currAccount);
   }
+});
+
+btnClose.addEventListener("click", function (e) {
+  e.preventDefault();
+  if (
+    inputCloseUsername.value === currAccount.username &&
+    Number(inputClosePin.value) === currAccount.pin
+  ) {
+    const index = accounts.findIndex(
+      (acc) => acc.username === currAccount.username
+    );
+    accounts.splice(index, 1);
+    containerApp.style.opacity = 0;
+  }
+  inputCloseUsername.value = inputClosePin.value = "";
 });
