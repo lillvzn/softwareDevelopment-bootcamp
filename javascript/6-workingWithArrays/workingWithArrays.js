@@ -120,3 +120,64 @@ const deposit = (mov) => mov > 0;
 console.log(movements.some(deposit));
 console.log(movements.every(deposit));
 console.log(movements.filter(deposit));
+
+// FLAT and FLATMAP
+const arr = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+console.log(arr.flat());
+
+const arrDeep = [
+  [1, [2, 3]],
+  [4, 5, 6, [7, 8, [9]]],
+];
+console.log(arr.flat(3));
+
+const totalBalance = accounts
+  .map((acc) => acc.movements)
+  .flat()
+  .map((acc, mov) => acc + mov, 0);
+console.log(totalBalance);
+
+// flatmap
+const altTotalBalance = accounts
+  .flatMap((acc) => acc.movements)
+  .map((acc, mov) => acc + mov, 0); // flatmap goes only 1 level deep
+
+const owners = ["John", "Zach", "Adam", "Mary"];
+console.log(owners.sort());
+
+// for movements (num)
+// Ascending
+console.log(movements.sort((a, b) => a - b));
+// Descending
+console.log(movements.sort((a, b) => b - a));
+
+// different array methods
+const x = new Array(7); // computes an empty array of length 7
+// x.fill(23);
+// x.fill(23, 2) // fills x array with 23 startting from index 2
+const someArr = [1, 2, 3, 4, 5, 6, 7];
+// someArr.fill(45, 3, 6); // fills 45 from index 3 to 6
+const y = new Array(7).fill(10);
+
+const z = Array.from({ length: 7 }, () => 1); // similar to var y;
+const a = Array.from({ length: 10 }, (_, i) => i + 1); // gives [1,2,3,4,5,6,7,8,9,10]
+
+// Challenge
+// 100 random dice roles
+const dices = Array.from(
+  { length: 100 },
+  () => Math.trunc(Math.random() * 6) + 1
+);
+
+labelBalance.addEventListener("click", function () {
+  const movementsUI = Array.from(
+    document.querySelectorAll(".movements__value"),
+    (el) => Number(el.textContent.replace("€", ""))
+  );
+  console.log(movementsUI);
+  const movementsUI2 = [...document.querySelectorAll(".movements__value")];
+});
