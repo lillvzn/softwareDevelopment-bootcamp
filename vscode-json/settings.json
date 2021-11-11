@@ -1,14 +1,14 @@
 {
   "editor.fontFamily": "'Cascadia Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.fontLigatures": "'calt', 'ss01'",
-  "editor.fontSize": 15,
+  "editor.fontSize": 15.2,
   "editor.fontWeight": "normal",
   "editor.formatOnType": true,
   "editor.formatOnSave": true,
   "security.workspace.trust.untrustedFiles": "open",
   "terminal.external.linuxExec": "gnome-terminal",
   "terminal.integrated.fontFamily": "MesloLGS NF ",
-  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.fontSize": 14,
   "workbench.colorTheme": "Dracula",
   "workbench.iconTheme": "material-icon-theme",
   "editor.bracketPairColorization.enabled": true,
@@ -158,5 +158,22 @@
     }
   },
   "python.defaultInterpreterPath": "/bin/python3",
-  "liveServer.settings.donotShowInfoMsg": true
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.tabSize": 2,
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.sneak": true,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<tab>"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["<S-tab>"],
+      "commands": ["workbench.action.previousEditor"]
+    }
+  ]
 }
