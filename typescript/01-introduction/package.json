@@ -1,0 +1,15 @@
+{
+  "name": "01-introduction",
+  "version": "1.0.0",
+  "description": "initial project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "author": "daemonslayer",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
