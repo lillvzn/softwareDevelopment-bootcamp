@@ -33,3 +33,61 @@ console.log(Math.floor(23.544)); // returns 23
 
 // rounding decimals
 console.log(+(23.544).toFixed(1)); // decimal to 1
+
+// reminding operator
+const isEven = (num) => num % 2 === 0;
+console.log(isEven(8));
+console.log(isEven(19));
+
+labelBalance.addEventListener("click", function () {
+  [...document.querySelectorAll(".movements_row")].forEach(function (row, idx) {
+    if (idx % 2 === 0) row.getElementsByClassName.backgroundColor = "orange";
+  });
+});
+
+// numeric seperators
+const diameter = 287_279_707_692; // _ is a numeric seperator
+console.log(diameter); // returns 287279707692
+// can be used to help notice the meaning od a number (cents or thousands etc)
+
+// BigInt (big integer)
+console.log(2 ** 53 - 1); // biggest number JS can represent
+console.log(Number.MAX_SAFE_INTEGER);
+
+const bigNum = 43537343427634549853762545n; // creating big int
+console.log(bigNum / 200);
+
+// Exceptions of bigInt
+console.log(20n > 15); // true
+console.log(20n === 20); // false
+console.log(20n == "20"); // true
+// cannot take sqrt of bigint
+console.log(10n / 3n); // 3n
+console.log(10 / 3); // 3.33333...
+
+// Date and times (creating)
+// dates
+const now = new Date();
+console.log(now); // current date
+
+console.log(new Date("Aug 05 2021 19:10:56")); // parses date and time
+
+console.log(new Date(account1.movementsDates[0]));
+
+console.log(new Date(2037, 10, 19, 15, 24, 46)); // year, month (0 based), date, hour, minute, second
+console.log(new Date(0)); // UNIX time -> Jan 01 1970 1:00:00
+console.log(new Date(3 * 24 * 60 * 60 * 1000)); // Jan 04 1970 1:00:00
+
+// working with dates
+const futureDate = new Date(2037, 10, 19, 15, 24, 46);
+console.log(futureDate.getFullYear());
+console.log(futureDate.getMonth());
+console.log(futureDate.getDate());
+console.log(futureDate.getDay());
+console.log(futureDate.getHours());
+console.log(futureDate.getMinutes());
+console.log(futureDate.getSeconds());
+console.log(futureDate.toISOString());
+console.log(futureDate.getTime());
+
+futureDate.setFullYear(2050); // sets the year, also setMonth, setDate etc
