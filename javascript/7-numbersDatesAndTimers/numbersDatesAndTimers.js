@@ -91,3 +91,8 @@ console.log(futureDate.toISOString());
 console.log(futureDate.getTime());
 
 futureDate.setFullYear(2050); // sets the year, also setMonth, setDate etc
+
+// operations with dates
+const daysPassed = (date1, date2) =>
+  Math.abs(date2 - date1) / (1000 * 60 * 60 * 24);
+console.log(daysPassed(new Date(2045, 4, 15), new Date(2046, 11, 5)));
