@@ -181,3 +181,16 @@ labelBalance.addEventListener("click", function () {
   console.log(movementsUI);
   const movementsUI2 = [...document.querySelectorAll(".movements__value")];
 });
+
+// at method
+const arr = [12, 234, 546, 1, 3];
+console.log(arr[0]); // first item in arr
+console.log(arr.at(0)); // same as above
+
+// last element of arr
+console.log(arr[arr.length - 1]);
+console.log(arr.slice(-1)[0]);
+console.log(arr.at(-1)); // using at method
+
+// at method works on strings as well
+console.log("Gary".at(-1)); // returns y
