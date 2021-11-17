@@ -96,3 +96,43 @@ futureDate.setFullYear(2050); // sets the year, also setMonth, setDate etc
 const daysPassed = (date1, date2) =>
   Math.abs(date2 - date1) / (1000 * 60 * 60 * 24);
 console.log(daysPassed(new Date(2045, 4, 15), new Date(2046, 11, 5)));
+
+// Internationalizing numbers
+const num = 2342343.234;
+const options = {
+  style: "unit",
+  unit: "mile-per-hour",
+};
+console.log(new Intl.NumberFormat("en-US", options).format(num));
+
+// setTimeout and setInterval
+setTimeout(() => console.log("Pizza delivered"), 5000); // executes after 5 sec
+
+const ingredients = ["olives", "chicken"];
+const pizzaTimer = setTimeout(
+  (ing1, ing2) => console.log(`Pizza delivered flavouring ${ing1} and ${ing2}`),
+  5000,
+  ...ingredients
+); // executes after 5 sec
+console.log("waiting..."); // executes before setTimeout func
+
+if (ingredients.includes("olives")) clearTimeout(pizzaTimer); // clears the setTimeout func
+
+// setInterval
+setInterval(function () {
+  const now = new Date();
+  console.log(now);
+}, 1000); // executes every sec
+
+// display running time
+const options = {
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
+  timeZone: "America/Los_Angeles",
+};
+const displayTime = function (locale, options) {
+  const now = new Date();
+  console.log(new Intl.DateTimeFormat(locale, options).format(now));
+};
+setInterval(displayTime, 1000, "en-US", options);
