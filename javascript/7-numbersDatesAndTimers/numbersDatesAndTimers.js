@@ -129,7 +129,7 @@ const options = {
   hour: "numeric",
   minute: "numeric",
   second: "numeric",
-  timeZone: "America/Los_Angeles",
+  hour12: false,
 };
 const displayTime = function (locale, options) {
   const now = new Date();
