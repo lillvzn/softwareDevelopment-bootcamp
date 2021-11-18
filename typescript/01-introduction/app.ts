@@ -1,70 +1,43 @@
-const person = {
-  // better syntax
-  name: "Jonas",
-  age: 45,
-};
-const person1: {
-  // type assignments
-  name: string;
-  age: number;
-} = {
-  name: "Julia",
-  age: 21,
-};
-console.log(person.name);
-console.log(person1.age);
-
-// arrays
-const person3 = {
-  name: "Katy",
-  age: 24,
-  hobbies: ["Sports", "Video Games"],
-};
-
-let favActivities: string[];
-favActivities = ["sports"];
-// let favActivities: any[];
-// favActivities = ["sports", 13];
-
-for (const hobby of person3.hobbies) {
-  console.log(hobby.toUpperCase()); // gives all available methods as typescript knows hobby is a string
+// union types
+function combine(a: number | string, b: number | string) {
+  let result;
+  if (typeof a === "number" && typeof b === "number") {
+    result = a + b;
+  } else {
+    result = a.toString() + b.toString();
+  }
+  return result;
 }
+const combineAges = combine(30, 23);
+const combineNames = combine("Anna", "Jose");
 
-// tuples are not present in javascript but in typescript
-const person4: {
-  name: string;
-  age: number;
-  hobbies: string[];
-  role: [number, string];
-} = {
-  name: "Arther",
-  age: 88,
-  hobbies: ["TV", "Football"], // array
-  role: [2, "author"], // tuple role: [number, string], push is accepted tho, but length is assigned
-  // person4.role = [2, "author, "Janitor] // throws error because of length (tuple)
-};
+// console.log(combineAges);
+// console.log(combineNames);
 
-// enum
-enum Role {
-  ADMIN,
-  READ_ONLY,
-  AUTHOR,
+// literal types
+function combine1(
+  a: number | string,
+  b: number | string,
+  resConvert: "a number" | "a text" // literal type
+) {
+  let result;
+  if (
+    (typeof a === "number" && typeof b === "number") ||
+    resConvert == "a number"
+  ) {
+    result = +a + +b;
+  } else {
+    result = a.toString() + b.toString();
+  }
+  // if (resConvert === "a number") {
+  //   return +result;
+  // } else return result.toString();
+  return result;
 }
-enum RoleTwo {
-  ADMIN = 100,
-  READ_ONLY = "READ-ONLY",
-  AUTHOR = 23,
-} // roles can be assigned with any values, but default is 0, 1, 2...
+const combineAges1 = combine1(30, 23, "a number");
+const combineStringAges = combine1("30", "30", "a number");
+const combineNames1 = combine1("Anna", "Jose", "a text");
 
-const person5 = {
-  name: "James",
-  age: 67,
-  hobbies: ["Eat", "Baseball"],
-  role: Role.ADMIN,
-};
-
-if (person5.role === Role.ADMIN) {
-  console.log("The role is admin");
-}
-
-// any - flexible (can store any type) - kinda bad practice - use as a fallback
+console.log(combineAges1);
+console.log(combineStringAges);
+console.log(combineNames1);
