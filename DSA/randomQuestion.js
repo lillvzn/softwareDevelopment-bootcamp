@@ -23,4 +23,29 @@ arr2 = ['m', 'z', 'n'];
 // are the elements repeated?
 // how big can the array get? (constraints)
 
-const commonEl = function (arr1, arr2) {};
+const arr1 = ["a", "b", "c", "z"];
+const arr2 = ["m", "n", "s"];
+
+// O(n + m) - time complexity
+// O(n) - space complexity
+const commonEl = function (arr1, arr2) {
+  let map = {};
+  for (let i = 0; i < arr1.length; i++) {
+    if (!map[arr1[i]]) {
+      map[arr1[i]] = true;
+    }
+  }
+  for (let j = 0; j < arr2.length; j++) {
+    if (map[arr2[j]]) {
+      return true;
+    }
+  }
+  return false;
+};
+// console.log(commonEl(arr1, arr2));
+
+// better way
+const commonEl1 = function (arr1, arr2) {
+  return arr1.some((item) => arr2.includes(item));
+};
+console.log(commonEl1(arr1, arr2));
