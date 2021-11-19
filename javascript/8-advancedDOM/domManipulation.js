@@ -50,3 +50,5 @@ document
     message.remove(); // new method
     // message.parentElement.removeChild(message); // old method
   });
+
+// styles, attributes and classes
